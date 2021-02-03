@@ -18,16 +18,33 @@ using namespace std;
 using iter::range;
 
 
-void readValues_v1(...) {
-	
-}
+void readValues_v1(int values[], int numValues) {
+	cout << "Enter grades: ";
+	for (int i : range(numValues))
+		cin >> values[i];
 
-int getTotalGrade_v1(...) {
-	return {};
+int getTotalGrade_v1(const int values[], const int numValues) {
+	int total = 0;
+	for (int i: range(numValues)) {
+		total += values[i];
+	}
+	MinMax minmax = findMinMax_v1(values, numValues)
+	return total - minVal - maxVal;
+
 }
 
 MinMax findMinMax_v1(...) {
-	return {};
+	int minVal = values[0];
+	int maxVal = values[0];
+	int total = 0;
+	for (int i: range(numValues)) {
+		if (values[i] < minVal)
+			minVal = values[i];
+		if (values[i] > maxVal)
+			maxVal = values[i];
+		total += values[i];
+	}
+	return total - minVal - maxVal;
 }
 
 /*TODO*/void readValues_v2(...) {

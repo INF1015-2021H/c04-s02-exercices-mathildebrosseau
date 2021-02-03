@@ -22,6 +22,18 @@
 
 using namespace std;
 
+const int maxSize = 50;
+
+struct Computer {
+	string format, compagnie; double tailleEcranPouces, cpuGHz;
+	int memoireRamGiB, memoireDisqueGB;
+};
+
+struct ComputerList {
+	Computer elems[maxSize];
+	int		 numElems = 0;
+};
+
 
 int main() {
 	cout << "Parameters example:" << "\n";
